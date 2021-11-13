@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="be.faxifin.androidtv">
 
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false"/>
+
     <application
-        android:allowBackup="true"
-        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
+        android:banner="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Faxifin" />
+        android:largeHeap="true"
+        android:theme="@style/Theme.Leanback"
+        android:fullBackupContent="true"
+        android:allowBackup="true">
+        <activity
+            android:name=".presentation.main_screen.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
