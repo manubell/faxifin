@@ -6,7 +6,6 @@ import androidx.fragment.app.FragmentActivity
 import be.faxifin.androidtv.R
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
