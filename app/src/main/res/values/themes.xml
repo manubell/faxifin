@@ -1,4 +1,19 @@
 <resources>
-
     <style name="Theme.Faxifin" parent="@style/Theme.Leanback" />
+
+    <style name="DefaultCardTheme" parent="Theme.Leanback">
+        <item name="imageCardViewStyle">@style/DefaultCardStyle</item>
+        <item name="imageCardViewImageStyle">@style/DefaultCardImageStyle</item>
+    </style>
+
+    <style name="DefaultCardStyle" parent="Widget.Leanback.ImageCardViewStyle">
+        <item name="cardBackground">@drawable/lb_background</item>
+    </style>
+
+    <!-- A default card style. Used in cards example. -->
+    <style name="DefaultCardImageStyle" parent="Widget.Leanback.ImageCardView.ImageStyle">
+        <item name="android:layout_width">@dimen/default_image_card_width</item>
+        <item name="android:layout_height">@dimen/default_image_card_height</item>
+    </style>
+
 </resources>

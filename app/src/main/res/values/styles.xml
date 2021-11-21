@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TextCardView. used in cards example - UNUSED ATM -->
+    <style name="TextCardStyle" parent="Widget.Leanback.BaseCardViewStyle">
+        <item name="cardBackground">@null</item>
+    </style>
+</resources>

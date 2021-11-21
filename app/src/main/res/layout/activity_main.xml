@@ -10,3 +10,10 @@
         android:name="be.faxifin.androidtv.presentation.main_screen.MainFragment"/>
 
 </RelativeLayout>
+
+<!-- TODO figure out what the following settings do
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:deviceIds="tv"
+    tools:ignore="MergeRootFrame"
+-->
+
