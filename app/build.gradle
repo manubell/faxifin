@@ -5,6 +5,9 @@ plugins {
     id 'kotlin-kapt'
 }
 
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+
 android {
     compileSdk 31
 
@@ -18,6 +21,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "JELLYFIN_BASE_URL", "\"" + localProperties['jellyfin.base.url'] + "\"")
+            buildConfigField("String", "JELLYFIN_ACCESS_TOKEN", "\"" + localProperties['jellyfin.access.token'] + "\"")
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
